@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的網頁</title>
+    <style>
+        /* 通用樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, main, footer {
+            padding: 20px;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+
+            header nav.active {
+                display: block;
+            }
+
+            header nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            header nav ul li {
+                margin-bottom: 10px;
+            }
+
+            header nav ul li a {
+                display: block;
+                padding: 10px;
+                background-color: #f4f4f4;
+                text-decoration: none;
+                color: #333;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>歡迎來到我的網頁！</h1>
+        <button onclick="toggleNav()">Menu</button>
+        <nav>
+            <ul>
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#services">服務</a></li>
+                <li><a href="#contact">聯繫我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>關於我</h2>
+            <p>在這裡寫一些關於您的信息。</p>
+        </section>
+
+        <section id="services">
+            <h2>我們的服務</h2>
+            <ul>
+                <li>服務1</li>
+                <li>服務2</li>
+                <li>服務3</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>聯繫我們</h2>
+            <p>如果您有任何疑問或建議，請通過以下方式與我們聯繫：</p>
+            <ul>
+                <li>電子郵件：<a href="mailto:youremail@example.com">youremail@example.com</a></li>
+                <li>電話：123-456-7890</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 我的網頁。保留所有權利。</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            var nav = document.querySelector('header nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
